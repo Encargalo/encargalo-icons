@@ -1,7 +1,7 @@
 {
   "name": "encargalo-icons",
   "version": "0.1.0",
-  "description": "Set de iconos de Encargalo (basado en IconSax) para React Native / Expo y web. Variantes outline y solid, color y tama\u00f1o por props.",
+  "description": "Set de iconos de Encargalo (basado en IconSax) para React Native / Expo y web. Variantes outline y solid, color y tamaño por props.",
   "license": "MIT",
   "author": "Encargalo",
   "homepage": "https://github.com/Encargalo/encargalo-icons#readme",
@@ -63,7 +63,9 @@
     "build": "node scripts/build.mjs",
     "catalog": "node scripts/catalog.mjs",
     "test": "node scripts/test.mjs",
-    "prepublishOnly": "npm run build && npm test"
+    "prepublishOnly": "npm run build && npm test",
+    "icons:import": "node scripts/import.mjs",
+    "catalog:site": "node scripts/catalog.mjs public/index.html"
   },
   "peerDependencies": {
     "react": ">=18",

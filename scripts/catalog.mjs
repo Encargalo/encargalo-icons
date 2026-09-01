@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 /**
- * Genera `catalog.html`: una página autónoma con todos los iconos, buscador y
- * control de tamaño/color. Sirve para revisar el set de un vistazo y para
- * compartirlo con diseño sin instalar nada.
+ * Genera una página autónoma con todos los iconos, buscador y control de
+ * tamaño/color. Sirve para revisar el set de un vistazo y para compartirlo con
+ * diseño sin instalar nada.
+ *
+ *   node scripts/catalog.mjs                    # → catalog.html (local)
+ *   node scripts/catalog.mjs public/index.html  # → lo que despliega Vercel
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -137,5 +140,7 @@ ${meta.icons.map(card).join('\n')}
 </html>
 `
 
-fs.writeFileSync(path.join(ROOT, 'catalog.html'), html)
-console.log(`catalog.html · ${meta.icons.length} iconos · ${(html.length / 1024).toFixed(0)} KB`)
+const target = path.resolve(ROOT, process.argv[2] ?? 'catalog.html')
+fs.mkdirSync(path.dirname(target), { recursive: true })
+fs.writeFileSync(target, html)
+console.log(`${path.relative(ROOT, target)} · ${meta.icons.length} iconos · ${(html.length / 1024).toFixed(0)} KB`)

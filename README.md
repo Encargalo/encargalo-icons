@@ -101,13 +101,17 @@ renombrar en cada pantalla: `CheckCircle` → `TickCircle`, `EyeOff` → `EyeSla
 
 ## Añadir o cambiar iconos
 
-1. Exporta el SVG a 24×24 desde Figma y déjalo en
-   `src/svg/outline/` o `src/svg/solid/`, con el nombre en kebab-case
-   (`bag-timer.svg`). Ese nombre es el que manda: el componente será `BagTimer`.
-2. Opcional: añade alias y etiquetas de búsqueda en `icons.config.json`.
-3. `npm run build` regenera `src/data`, `src/native`, `src/web` y `metadata.json`.
-4. `npm test` comprueba que todo sigue renderizando.
-5. `npm run catalog` genera `catalog.html` para revisarlos de un vistazo.
+**El procedimiento completo está en [ACTUALIZAR.md](./ACTUALIZAR.md)**, incluido
+cómo preparar una máquina nueva y cómo publicar. En resumen:
+
+1. Deja los SVG exportados desde Figma en la carpeta que tengas configurada como
+   bandeja, dentro de `Outline/` o `Solid/`.
+2. `npm run icons:import` los copia a `src/svg/`, normaliza los nombres y
+   descarta los inválidos o duplicados.
+3. Opcional: añade alias y etiquetas de búsqueda en `icons.config.json`.
+4. `npm run build` regenera `src/data`, `src/native`, `src/web` y `metadata.json`.
+5. `npm test` comprueba que todo sigue renderizando.
+6. `npm run catalog` genera `catalog.html` para revisarlos de un vistazo.
 
 Todo lo que hay bajo `src/data`, `src/native` y `src/web` es generado: no se
 edita a mano. Lo único que se toca son los SVG y `icons.config.json`.
