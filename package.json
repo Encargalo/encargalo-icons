@@ -1,0 +1,83 @@
+{
+  "name": "encargalo-icons",
+  "version": "0.1.0",
+  "description": "Set de iconos de Encargalo (basado en IconSax) para React Native / Expo y web. Variantes outline y solid, color y tamaño por props.",
+  "license": "MIT",
+  "author": "Encargalo",
+  "homepage": "https://github.com/Encargalo/encargalo-icons#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Encargalo/encargalo-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Encargalo/encargalo-icons/issues"
+  },
+  "keywords": [
+    "icons",
+    "iconsax",
+    "react-native",
+    "expo",
+    "react",
+    "svg",
+    "encargalo"
+  ],
+  "sideEffects": false,
+  "main": "./src/web/index.js",
+  "module": "./src/web/index.js",
+  "react-native": "./src/native/index.js",
+  "types": "./src/native/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/native/index.d.ts",
+      "react-native": "./src/native/index.js",
+      "browser": "./src/web/index.js",
+      "default": "./src/web/index.js"
+    },
+    "./dynamic": {
+      "types": "./src/native/dynamic.d.ts",
+      "react-native": "./src/native/dynamic.js",
+      "browser": "./src/web/dynamic.js",
+      "default": "./src/web/dynamic.js"
+    },
+    "./native": {
+      "types": "./src/native/index.d.ts",
+      "default": "./src/native/index.js"
+    },
+    "./web": {
+      "types": "./src/web/index.d.ts",
+      "default": "./src/web/index.js"
+    },
+    "./metadata.json": "./metadata.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "metadata.json",
+    "icons.config.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "catalog": "node scripts/catalog.mjs",
+    "test": "node scripts/test.mjs",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-native-svg": ">=13"
+  },
+  "peerDependenciesMeta": {
+    "react-native-svg": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  }
+}

@@ -1,0 +1,44 @@
+name: Publicar en npm
+
+# Se dispara al empujar un tag de versión (el que crea `npm version`).
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # procedencia firmada en npm
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+
+      - run: npm ci
+
+      # Falla pronto si el tag y la versión del package.json no coinciden.
+      - name: Comprobar que el tag coincide con la versión
+        run: |
+          TAG="${GITHUB_REF_NAME#v}"
+          PKG="$(node -p "require('./package.json').version")"
+          test "$TAG" = "$PKG" || { echo "El tag ($TAG) no coincide con package.json ($PKG)"; exit 1; }
+
+      # Regenera desde los SVG y comprueba que no quedó nada sin commitear.
+      - name: Regenerar el set
+        run: |
+          npm run build
+          git diff --exit-code -- src metadata.json \
+            || { echo "Hay cambios generados sin commitear: ejecuta 'npm run build' y súbelos"; exit 1; }
+
+      - run: npm test
+
+      - run: npm publish --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

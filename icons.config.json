@@ -1,0 +1,39 @@
+{
+  "$comment": "Metadatos del set. `aliases` genera exports adicionales que apuntan al mismo icono (útil para migrar desde lucide sin tocar el nombre en cada pantalla). `tags` sólo alimenta el buscador del catálogo.",
+  "precision": 2,
+  "defaults": {
+    "size": 24,
+    "strokeWidth": 1.75,
+    "variant": "outline"
+  },
+  "icons": {
+    "arrow-left":    { "aliases": ["ArrowLeftLong"], "tags": ["atrás", "volver", "back", "navegación"] },
+    "arrow-right":   { "aliases": ["ArrowRightLong"], "tags": ["siguiente", "next", "navegación"] },
+    "bag":           { "aliases": ["ShoppingBag"], "tags": ["carrito", "compra", "pedido", "cart"] },
+    "bag-timer":     { "aliases": ["OrderPending"], "tags": ["pedido", "pendiente", "en curso", "tiempo"] },
+    "call":          { "aliases": ["Phone"], "tags": ["teléfono", "llamada", "contacto"] },
+    "car":           { "aliases": ["Delivery"], "tags": ["entrega", "envío", "domicilio", "repartidor"] },
+    "card":          { "aliases": ["CreditCard"], "tags": ["pago", "tarjeta", "checkout"] },
+    "chevron-down":  { "tags": ["desplegar", "acordeón", "flecha"] },
+    "chevron-left":  { "tags": ["atrás", "flecha"] },
+    "chevron-right": { "tags": ["ir", "detalle", "flecha"] },
+    "close-circle":  { "aliases": ["XCircle"], "tags": ["cerrar", "cancelar", "error"] },
+    "danger":        { "aliases": ["AlertTriangle"], "tags": ["alerta", "advertencia", "error"] },
+    "document-like": { "aliases": ["Terms"], "tags": ["términos", "condiciones", "documento"] },
+    "eye":           { "tags": ["ver", "mostrar", "contraseña"] },
+    "eye-slash":     { "aliases": ["EyeOff"], "tags": ["ocultar", "contraseña"] },
+    "helmet":        { "tags": ["repartidor", "moto", "casco", "delivery"] },
+    "home":          { "tags": ["inicio", "tab", "principal"] },
+    "info-circle":   { "aliases": ["Info"], "tags": ["información", "ayuda"] },
+    "paperclip":     { "aliases": ["Attachment"], "tags": ["adjuntar", "archivo"] },
+    "personal-card": { "aliases": ["IdCard"], "tags": ["perfil", "identidad", "cuenta", "dni"] },
+    "receipt":       { "aliases": ["Order"], "tags": ["pedido", "factura", "ticket", "tab"] },
+    "search":        { "tags": ["buscar", "lupa", "explorar"] },
+    "shield-tick":   { "aliases": ["ShieldCheck"], "tags": ["seguridad", "verificado", "protegido"] },
+    "shop":          { "tags": ["negocio", "tienda", "comercio", "tab"] },
+    "star":          { "tags": ["favorito", "valoración", "rating"] },
+    "tick-circle":   { "aliases": ["CheckCircle"], "tags": ["éxito", "confirmado", "ok"] },
+    "user":          { "tags": ["perfil", "cuenta", "tab"] },
+    "user-square":   { "aliases": ["Profile"], "tags": ["perfil", "cuenta", "avatar"] }
+  }
+}
