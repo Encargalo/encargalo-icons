@@ -194,16 +194,29 @@ npm run catalog        # → catalog.html
 falta.
 
 **En Vercel:** el proyecto está conectado al repo, así que **cada push a `main`
-lo redespliega solo**. No hay ningún paso manual. La configuración de build vive
-en el panel de Vercel:
+lo redespliega solo**. No hay ningún paso manual.
 
-- *Build Command*: `npm run catalog && mkdir -p public && mv catalog.html public/index.html`
-- *Output Directory*: `public`
+La configuración de build vive en `vercel.json`, en la raíz del repo:
 
-> Si prefieres que esa configuración viva en el repo en lugar del panel, crea un
-> `vercel.json` con `buildCommand: "npm run build && npm run catalog:site"` y
-> `outputDirectory: "public"`. El script `catalog:site` ya existe y escribe
-> directamente en `public/index.html`.
+```json
+{
+  "buildCommand": "npm run build && npm run catalog:site",
+  "outputDirectory": "public"
+}
+```
+
+`vercel.json` tiene prioridad sobre lo que haya en el panel de Vercel, así que
+ese es el único sitio donde tocarlo. La ventaja de tenerlo en el repo: si alguien
+reimporta el proyecto o hay que crear uno nuevo, no tiene que acordarse de
+configurar nada a mano.
+
+Para reproducir en local exactamente lo que hace Vercel:
+
+```bash
+npm run build && npm run catalog:site   # → public/index.html
+```
+
+`public/` y `catalog.html` están en `.gitignore`: son artefactos.
 
 ---
 

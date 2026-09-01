@@ -6,3 +6,6 @@ catalog.html
 
 # ruta local de la bandeja de iconos; cambia por persona
 .iconsrc.json
+
+# salida del build del catálogo
+public/
