@@ -11,11 +11,14 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parseSvg } from './svg-parse.mjs'
+import { toCjs } from './to-cjs.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const SVG_DIR = path.join(ROOT, 'src', 'svg')
 const SRC_DIR = path.join(ROOT, 'src')
 const DATA_DIR = path.join(SRC_DIR, 'data')
+/** Espejo CommonJS de src/, para que Jest y cualquier `require()` funcionen sin configuración. */
+const CJS_DIR = path.join(ROOT, 'cjs')
 /** Un directorio por renderer. Cada uno reexporta los mismos datos envueltos con su createIcon. */
 const TARGETS = [
   { dir: 'native', factory: '../core/createIcon.native.js' },
@@ -244,6 +247,37 @@ const metadata = {
 }
 fs.writeFileSync(path.join(ROOT, 'metadata.json'), JSON.stringify(metadata, null, 2) + '\n')
 
+/* ------------------------------------------------- espejo en CommonJS */
+
+// Jest, en modo CommonJS, hace `require()` de las dependencias y no transpila
+// node_modules por defecto. Publicando también CJS, quien instale el paquete no
+// tiene que tocar su `transformIgnorePatterns`.
+fs.rmSync(CJS_DIR, { recursive: true, force: true })
+
+let cjsFiles = 0
+const mirror = (from, to) => {
+  fs.mkdirSync(to, { recursive: true })
+  for (const entry of fs.readdirSync(from, { withFileTypes: true })) {
+    const src = path.join(from, entry.name)
+    const dest = path.join(to, entry.name)
+    if (entry.isDirectory()) {
+      if (entry.name === 'svg') continue // los SVG de origen no se publican
+      mirror(src, dest)
+    } else if (entry.name.endsWith('.js')) {
+      try {
+        fs.writeFileSync(dest, toCjs(fs.readFileSync(src, 'utf8')))
+        cjsFiles++
+      } catch (error) {
+        throw new Error(`no pude convertir ${path.relative(ROOT, src)} a CommonJS: ${error.message}`)
+      }
+    } else if (entry.name.endsWith('.d.ts')) {
+      // Los tipos sirven para las dos formas: se copian tal cual.
+      fs.copyFileSync(src, dest)
+    }
+  }
+}
+mirror(SRC_DIR, CJS_DIR)
+
 /* ----------------------------------------------------------------- informe */
 
 const du = (dir) => fs.readdirSync(dir).reduce((s, f) => s + fs.statSync(path.join(dir, f)).size, 0)
@@ -254,4 +288,5 @@ const totalNodes = names.reduce(
 console.log(`${names.length} iconos · ${both} con las dos variantes · ${totalNodes} figuras`)
 console.log(`  src/data   ${(du(DATA_DIR) / 1024).toFixed(1)} KB`)
 for (const t of TARGETS) console.log(`  src/${t.dir.padEnd(7)}${(du(path.join(SRC_DIR, t.dir)) / 1024).toFixed(1)} KB`)
+console.log(`  cjs/       espejo CommonJS · ${cjsFiles} archivos`)
 for (const w of warnings) console.warn(`  aviso: ${w}`)

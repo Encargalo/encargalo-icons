@@ -16,5 +16,5 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Comprobar que lo generado está al día
-        run: git diff --exit-code -- src metadata.json
+        run: git diff --exit-code -- src cjs metadata.json
       - run: npm test

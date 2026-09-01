@@ -143,19 +143,21 @@ npm update encargalo-icons        # dentro del rango ^ del package.json
 npm install encargalo-icons@latest
 ```
 
-## Notas por proyecto
+## Compatibilidad
 
-**Expo / Jest.** El paquete se publica como ESM. Para que Jest lo transpile,
-añade `encargalo-icons` a `transformIgnorePatterns` en `package.json`:
+El paquete se publica en **ESM y CommonJS a la vez**, así que no hay que
+configurar nada en el proyecto que lo instale: ni `transformIgnorePatterns` en
+Jest, ni `transpilePackages` en Next. Cada herramienta recibe el formato que
+espera:
 
-```jsonc
-"transformIgnorePatterns": [
-  "node_modules/(?!(...|encargalo-icons))"
-]
-```
+| Quién | Qué recibe |
+| --- | --- |
+| Metro / Expo | `src/native/` (ESM) |
+| Jest, jest-expo | `cjs/native/` (CommonJS) |
+| Vite, webpack, Next | `src/web/` (ESM, con tree-shaking) |
+| `require()` a secas | `cjs/web/` (CommonJS) |
 
-**Next.js.** Si se usa desde el servidor sin bundling, añádelo a
-`transpilePackages` en `next.config.js`.
+Instala y funciona con npm, pnpm, yarn (clásico y Berry con Plug'n'Play) y bun.
 
 ## Peso
 

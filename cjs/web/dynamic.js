@@ -1,0 +1,79 @@
+// Archivo generado por scripts/build.mjs. No editar a mano.
+const _react = require('react')
+const { createElement } = _react
+const ___index_js = require('./index.js')
+const { ArrowLeft, ArrowRight, Bag, BagTimer, Call, Car, Card, ChevronDown, ChevronLeft, ChevronRight, CloseCircle, Danger, DocumentLike, Eye, EyeSlash, Helmet, Home, InfoCircle, Paperclip, PersonalCard, Receipt, Search, ShieldTick, Shop, Star, TickCircle, User, UserSquare } = ___index_js
+const iconRegistry = {
+  "arrow-left": ArrowLeft,
+  "arrow-right": ArrowRight,
+  "bag": Bag,
+  "bag-timer": BagTimer,
+  "call": Call,
+  "car": Car,
+  "card": Card,
+  "chevron-down": ChevronDown,
+  "chevron-left": ChevronLeft,
+  "chevron-right": ChevronRight,
+  "close-circle": CloseCircle,
+  "danger": Danger,
+  "document-like": DocumentLike,
+  "eye": Eye,
+  "eye-slash": EyeSlash,
+  "helmet": Helmet,
+  "home": Home,
+  "info-circle": InfoCircle,
+  "paperclip": Paperclip,
+  "personal-card": PersonalCard,
+  "receipt": Receipt,
+  "search": Search,
+  "shield-tick": ShieldTick,
+  "shop": Shop,
+  "star": Star,
+  "tick-circle": TickCircle,
+  "user": User,
+  "user-square": UserSquare,
+}
+
+const iconNames = [
+  "arrow-left",
+  "arrow-right",
+  "bag",
+  "bag-timer",
+  "call",
+  "car",
+  "card",
+  "chevron-down",
+  "chevron-left",
+  "chevron-right",
+  "close-circle",
+  "danger",
+  "document-like",
+  "eye",
+  "eye-slash",
+  "helmet",
+  "home",
+  "info-circle",
+  "paperclip",
+  "personal-card",
+  "receipt",
+  "search",
+  "shield-tick",
+  "shop",
+  "star",
+  "tick-circle",
+  "user",
+  "user-square",
+]
+
+/** Renderiza un icono por nombre. Úsalo sólo cuando el nombre venga de datos. */
+function Icon({ name, fallback = null, ...props }) {
+  const Component = iconRegistry[name]
+  if (!Component) return fallback
+  return createElement(Component, props)
+}
+
+Icon.displayName = 'Icon'
+
+exports.iconRegistry = iconRegistry
+exports.iconNames = iconNames
+exports.Icon = Icon

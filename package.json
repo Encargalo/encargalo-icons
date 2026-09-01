@@ -1,7 +1,7 @@
 {
   "name": "encargalo-icons",
-  "version": "0.1.0",
-  "description": "Set de iconos de Encargalo (basado en IconSax) para React Native / Expo y web. Variantes outline y solid, color y tamaño por props.",
+  "version": "0.2.0",
+  "description": "Set de iconos de Encargalo (basado en IconSax) para React Native / Expo y web. Variantes outline y solid, color y tama\u00f1o por props.",
   "license": "MIT",
   "author": "Encargalo",
   "homepage": "https://github.com/Encargalo/encargalo-icons#readme",
@@ -22,29 +22,57 @@
     "encargalo"
   ],
   "sideEffects": false,
-  "main": "./src/web/index.js",
+  "main": "./cjs/web/index.js",
   "module": "./src/web/index.js",
   "react-native": "./src/native/index.js",
   "types": "./src/native/index.d.ts",
   "exports": {
     ".": {
-      "types": "./src/native/index.d.ts",
-      "react-native": "./src/native/index.js",
-      "browser": "./src/web/index.js",
+      "react-native": {
+        "types": "./src/native/index.d.ts",
+        "import": "./src/native/index.js",
+        "require": "./cjs/native/index.js",
+        "default": "./src/native/index.js"
+      },
+      "browser": {
+        "types": "./src/web/index.d.ts",
+        "import": "./src/web/index.js",
+        "require": "./cjs/web/index.js",
+        "default": "./src/web/index.js"
+      },
+      "types": "./src/web/index.d.ts",
+      "import": "./src/web/index.js",
+      "require": "./cjs/web/index.js",
       "default": "./src/web/index.js"
     },
     "./dynamic": {
-      "types": "./src/native/dynamic.d.ts",
-      "react-native": "./src/native/dynamic.js",
-      "browser": "./src/web/dynamic.js",
+      "react-native": {
+        "types": "./src/native/dynamic.d.ts",
+        "import": "./src/native/dynamic.js",
+        "require": "./cjs/native/dynamic.js",
+        "default": "./src/native/dynamic.js"
+      },
+      "browser": {
+        "types": "./src/web/dynamic.d.ts",
+        "import": "./src/web/dynamic.js",
+        "require": "./cjs/web/dynamic.js",
+        "default": "./src/web/dynamic.js"
+      },
+      "types": "./src/web/dynamic.d.ts",
+      "import": "./src/web/dynamic.js",
+      "require": "./cjs/web/dynamic.js",
       "default": "./src/web/dynamic.js"
     },
     "./native": {
       "types": "./src/native/index.d.ts",
+      "import": "./src/native/index.js",
+      "require": "./cjs/native/index.js",
       "default": "./src/native/index.js"
     },
     "./web": {
       "types": "./src/web/index.d.ts",
+      "import": "./src/web/index.js",
+      "require": "./cjs/web/index.js",
       "default": "./src/web/index.js"
     },
     "./metadata.json": "./metadata.json",
@@ -53,9 +81,11 @@
   "files": [
     "src",
     "!src/svg",
+    "cjs",
     "metadata.json",
     "icons.config.json",
     "README.md",
+    "ACTUALIZAR.md",
     "CHANGELOG.md",
     "LICENSE"
   ],

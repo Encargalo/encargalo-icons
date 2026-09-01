@@ -254,15 +254,12 @@ pnpm add encargalo-icons --config.minimumReleaseAge=0
 
 npm, yarn 1 y bun no aplican cuarentena.
 
-**Los tests de Jest fallan al importar un icono en la app móvil.**
-El paquete se publica como ESM. Añade `encargalo-icons` a
-`transformIgnorePatterns` en el `package.json` de la app:
-
-```jsonc
-"transformIgnorePatterns": [
-  "node_modules/(?!(...|encargalo-icons))"
-]
-```
+**El build falla con «no pude convertir X a CommonJS».**
+`scripts/to-cjs.mjs` sólo entiende las formas de import/export que usa este
+repo, y protesta ante cualquier otra en vez de emitir algo roto. Si añadiste
+sintaxis nueva a `src/core/`, o la ajustas, o amplías el conversor. Los tests
+comparan el render de ESM y CommonJS icono a icono, así que una divergencia se
+detecta ahí.
 
 **Un icono se ve relleno cuando debería ir con trazo (o al revés).**
 Es cosa del export de Figma, no de la conversión. Comprueba en el SVG original
