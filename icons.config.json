@@ -22,6 +22,7 @@
     "document-like": { "aliases": ["Terms"], "tags": ["términos", "condiciones", "documento"] },
     "eye":           { "tags": ["ver", "mostrar", "contraseña"] },
     "eye-slash":     { "aliases": ["EyeOff"], "tags": ["ocultar", "contraseña"] },
+    "gallery-add":   { "tags": ["imagen", "agregar", "subir", "foto", "galería"] },
     "helmet":        { "tags": ["repartidor", "moto", "casco", "delivery"] },
     "home":          { "tags": ["inicio", "tab", "principal"] },
     "info-circle":   { "aliases": ["Info"], "tags": ["información", "ayuda"] },

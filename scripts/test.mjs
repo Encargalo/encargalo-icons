@@ -15,6 +15,7 @@ import { createRequire } from 'node:module'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { createElement as h } from 'react'
+import { parseSvg } from './svg-parse.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const TMP = path.join(ROOT, '.tmp-test')
@@ -121,10 +122,6 @@ for (const [build, lib] of Object.entries(builds)) {
     assert.match(render(Search, { size: 48, absoluteStrokeWidth: true }), /stroke-width="0.75"/)
   })
 
-  it('respeta viewBox no estándar', () => {
-    assert.match(render(Helmet), /viewBox="0 0 512 512"/)
-  })
-
   it('el alias apunta al mismo componente', () => {
     assert.equal(CheckCircle, TickCircle)
   })
@@ -137,6 +134,12 @@ for (const [build, lib] of Object.entries(builds)) {
     }
   })
 }
+
+test('[svg-parse] respeta viewBox no estándar', () => {
+  const svg = '<svg viewBox="0 0 512 512"><path d="M0 0h512v512H0z"/></svg>'
+  const parsed = parseSvg(svg, { name: 'fixture' })
+  assert.equal(parsed.viewBox, '0 0 512 512')
+})
 
 // Los dos formatos deben producir exactamente el mismo SVG.
 test('[paridad] ESM y CommonJS renderizan idéntico', () => {

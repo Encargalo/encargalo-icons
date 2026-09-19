@@ -1,0 +1,16 @@
+// Archivo generado por scripts/build.mjs. No editar a mano.
+const Motorbiker = {
+  solid: {
+    viewBox: "0 0 24 24",
+    root: { fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" },
+    nodes: [
+      ["path", { d: "M18 14L17 11" }],
+      ["path", { d: "M3 9L9 11C9 10.47 9.21 9.96 9.59 9.59C9.96 9.21 10.47 9 11 9H13C13.5 9 13.98 9.19 14.34 9.52C14.71 9.86 14.94 10.31 14.99 10.81" }],
+      ["path", { d: "M8 17H11C11.27 17 11.52 16.89 11.71 16.71C11.89 16.52 12 16.27 12 16C12 14.41 12.63 12.88 13.76 11.76C14.88 10.63 16.41 10 18 10C18.27 10 18.52 9.89 18.71 9.71C18.89 9.52 19 9.27 19 9V8.25C18.79 6.94 18.07 5.78 17 5" }],
+      ["path", { d: "M19 20C20.66 20 22 18.66 22 17C22 15.34 20.66 14 19 14C17.34 14 16 15.34 16 17C16 18.66 17.34 20 19 20Z" }],
+      ["path", { d: "M5 20C6.66 20 8 18.66 8 17C8 15.34 6.66 14 5 14C3.34 14 2 15.34 2 17C2 18.66 3.34 20 5 20Z" }],
+    ],
+  },
+}
+
+exports.Motorbiker = Motorbiker
