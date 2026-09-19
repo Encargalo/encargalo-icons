@@ -3,6 +3,21 @@
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado es [SemVer](https://semver.org/lang/es/).
 
+## [0.3.0] - 2026-09-19
+
+### Añadido
+
+- 21 iconos nuevos: `account`, `add`, `alert-circle`, `clock`, `copy`,
+  `eye-line`, `gallery-add`, `location`, `mobile`, `moneys`, `scan-barcode`,
+  `shiel-verified`, `shopping-bag-plain`, `store`, `ticket`, `error`,
+  `motorbiker`, `start`, `succes`, `user-card`, `warning`.
+- Variante que faltaba en iconos ya existentes: `arrow-left` y `arrow-right`
+  ganan `outline`, `call` gana `solid`.
+
+### Cambiado
+
+- `helmet`: rediseño completo (`outline` actualizado y `solid` añadido).
+
 ## [0.2.0] - 2026-09-01
 
 ### Añadido
