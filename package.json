@@ -1,7 +1,7 @@
 {
   "name": "encargalo-icons",
-  "version": "0.2.0",
-  "description": "Set de iconos de Encargalo (basado en IconSax) para React Native / Expo y web. Variantes outline y solid, color y tama\u00f1o por props.",
+  "version": "0.3.0",
+  "description": "Set de iconos de Encargalo (basado en IconSax) para React Native / Expo y web. Variantes outline y solid, color y tamaño por props.",
   "license": "MIT",
   "author": "Encargalo",
   "homepage": "https://github.com/Encargalo/encargalo-icons#readme",
