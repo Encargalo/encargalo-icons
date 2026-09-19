@@ -93,6 +93,7 @@
     "build": "node scripts/build.mjs",
     "catalog": "node scripts/catalog.mjs",
     "test": "node scripts/test.mjs",
+    "version": "npm run build && git add metadata.json src cjs",
     "prepublishOnly": "npm run build && npm test",
     "icons:import": "node scripts/import.mjs",
     "catalog:site": "node scripts/catalog.mjs public/index.html"
