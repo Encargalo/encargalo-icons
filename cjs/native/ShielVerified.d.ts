@@ -2,3 +2,4 @@
 import type { IconComponent } from '../core/types'
 
 export declare const ShielVerified: IconComponent
+export declare const ShieldCheck: IconComponent

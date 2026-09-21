@@ -2,7 +2,7 @@
 const _react = require('react')
 const { createElement } = _react
 const ___index_js = require('./index.js')
-const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, Bag, BagTimer, Call, Car, Card, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Copy, Danger, DocumentLike, Error, Eye, EyeLine, EyeSlash, GalleryAdd, Helmet, Home, InfoCircle, Location, Mobile, Moneys, Motorbiker, Paperclip, PersonalCard, Receipt, ScanBarcode, Search, ShielVerified, ShieldTick, Shop, ShoppingBagPlain, Star, Start, Store, Succes, TickCircle, Ticket, User, UserCard, UserSquare, Warning } = ___index_js
+const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, Bag, BagTimer, Call, Car, Card, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Copy, Danger, DocumentLike, Error, Eye, EyeLine, EyeSlash, GalleryAdd, Helmet, Home, InfoCircle, Location, Mobile, Moneys, Motorbiker, Paperclip, PersonalCard, Receipt, ScanBarcode, Search, ShielVerified, Shop, ShoppingBagPlain, Star, Store, Succes, TickCircle, Ticket, User, UserCard, UserSquare, Warning } = ___index_js
 const iconRegistry = {
   "account": Account,
   "add": Add,
@@ -40,11 +40,9 @@ const iconRegistry = {
   "scan-barcode": ScanBarcode,
   "search": Search,
   "shiel-verified": ShielVerified,
-  "shield-tick": ShieldTick,
   "shop": Shop,
   "shopping-bag-plain": ShoppingBagPlain,
   "star": Star,
-  "start": Start,
   "store": Store,
   "succes": Succes,
   "tick-circle": TickCircle,
@@ -92,11 +90,9 @@ const iconNames = [
   "scan-barcode",
   "search",
   "shiel-verified",
-  "shield-tick",
   "shop",
   "shopping-bag-plain",
   "star",
-  "start",
   "store",
   "succes",
   "tick-circle",

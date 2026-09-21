@@ -30,7 +30,7 @@
     "personal-card": { "aliases": ["IdCard"], "tags": ["perfil", "identidad", "cuenta", "dni"] },
     "receipt":       { "aliases": ["Order"], "tags": ["pedido", "factura", "ticket", "tab"] },
     "search":        { "tags": ["buscar", "lupa", "explorar"] },
-    "shield-tick":   { "aliases": ["ShieldCheck"], "tags": ["seguridad", "verificado", "protegido"] },
+    "shiel-verified": { "aliases": ["ShieldCheck"], "tags": ["seguridad", "verificado", "protegido"] },
     "shop":          { "tags": ["negocio", "tienda", "comercio", "tab"] },
     "star":          { "tags": ["favorito", "valoración", "rating"] },
     "tick-circle":   { "aliases": ["CheckCircle"], "tags": ["éxito", "confirmado", "ok"] },
