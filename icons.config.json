@@ -26,6 +26,7 @@
     "helmet":        { "tags": ["repartidor", "moto", "casco", "delivery"] },
     "home":          { "tags": ["inicio", "tab", "principal"] },
     "info-circle":   { "aliases": ["Info"], "tags": ["información", "ayuda"] },
+    "messages":      { "tags": ["chat", "mensajes", "conversación", "soporte"] },
     "paperclip":     { "aliases": ["Attachment"], "tags": ["adjuntar", "archivo"] },
     "personal-card": { "aliases": ["IdCard"], "tags": ["perfil", "identidad", "cuenta", "dni"] },
     "receipt":       { "aliases": ["Order"], "tags": ["pedido", "factura", "ticket", "tab"] },
@@ -34,6 +35,7 @@
     "shop":          { "tags": ["negocio", "tienda", "comercio", "tab"] },
     "star":          { "tags": ["favorito", "valoración", "rating"] },
     "tick-circle":   { "aliases": ["CheckCircle"], "tags": ["éxito", "confirmado", "ok"] },
+    "trash":         { "tags": ["eliminar", "borrar", "basura"] },
     "user":          { "tags": ["perfil", "cuenta", "tab"] },
     "user-square":   { "aliases": ["Profile"], "tags": ["perfil", "cuenta", "avatar"] }
   }

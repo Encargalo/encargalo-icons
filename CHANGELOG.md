@@ -3,6 +3,24 @@
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado es [SemVer](https://semver.org/lang/es/).
 
+## [1.1.0] - 2026-09-23
+
+### Añadido
+
+- 2 iconos nuevos: `messages` (`outline` y `solid`) y `trash` (`outline`).
+- Variante `solid` de `mobile`.
+
+### Cambiado
+
+- Rediseño de `mobile` (`outline`) y `receipt` (`outline` y `solid`).
+
+## [1.0.0] - 2026-09-20
+
+### Eliminado
+
+- `start` y `shield-tick`, duplicados de `star` (`solid`) y `shiel-verified`
+  (`outline`). Se conserva un único nombre por icono.
+
 ## [0.3.0] - 2026-09-19
 
 ### Añadido

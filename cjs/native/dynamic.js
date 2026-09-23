@@ -2,7 +2,7 @@
 const _react = require('react')
 const { createElement } = _react
 const ___index_js = require('./index.js')
-const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, Bag, BagTimer, Call, Car, Card, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Copy, Danger, DocumentLike, Error, Eye, EyeLine, EyeSlash, GalleryAdd, Helmet, Home, InfoCircle, Location, Mobile, Moneys, Motorbiker, Paperclip, PersonalCard, Receipt, ScanBarcode, Search, ShielVerified, Shop, ShoppingBagPlain, Star, Store, Succes, TickCircle, Ticket, User, UserCard, UserSquare, Warning } = ___index_js
+const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, Bag, BagTimer, Call, Car, Card, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Copy, Danger, DocumentLike, Error, Eye, EyeLine, EyeSlash, GalleryAdd, Helmet, Home, InfoCircle, Location, Messages, Mobile, Moneys, Motorbiker, Paperclip, PersonalCard, Receipt, ScanBarcode, Search, ShielVerified, Shop, ShoppingBagPlain, Star, Store, Succes, TickCircle, Ticket, Trash, User, UserCard, UserSquare, Warning } = ___index_js
 const iconRegistry = {
   "account": Account,
   "add": Add,
@@ -31,6 +31,7 @@ const iconRegistry = {
   "home": Home,
   "info-circle": InfoCircle,
   "location": Location,
+  "messages": Messages,
   "mobile": Mobile,
   "moneys": Moneys,
   "motorbiker": Motorbiker,
@@ -47,6 +48,7 @@ const iconRegistry = {
   "succes": Succes,
   "tick-circle": TickCircle,
   "ticket": Ticket,
+  "trash": Trash,
   "user": User,
   "user-card": UserCard,
   "user-square": UserSquare,
@@ -81,6 +83,7 @@ const iconNames = [
   "home",
   "info-circle",
   "location",
+  "messages",
   "mobile",
   "moneys",
   "motorbiker",
@@ -97,6 +100,7 @@ const iconNames = [
   "succes",
   "tick-circle",
   "ticket",
+  "trash",
   "user",
   "user-card",
   "user-square",
