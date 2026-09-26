@@ -42,7 +42,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-          registry-url: https://registry.npmjs.org
 
       # Trusted Publishing exige npm 11.5.1 o superior.
       - run: npm install -g npm@^11.5.1
