@@ -2,7 +2,7 @@
 const _react = require('react')
 const { createElement } = _react
 const ___index_js = require('./index.js')
-const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, ArrowTransfer, Bag, BagTimer, Call, Car, Card, CardTick, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Coin, Copy, Danger, DocumentLike, Error, Eye, EyeLine, EyeSlash, GalleryAdd, Helmet, Home, InfoCircle, Location, LocationSlash, Map, Messages, Mobile, Moneys, Motorbiker, Paperclip, PersonalCard, Receipt, ScanBarcode, Search, ShielVerified, Shop, ShoppingBagPlain, Star, Store, Succes, TickCircle, Ticket, Trash, User, UserCard, UserRemove, UserSquare, Warning } = ___index_js
+const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, ArrowTransfer, Bag, BagTimer, Call, Car, Card, CardTick, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Coin, Copy, Danger, DocumentLike, EmptyWallet, Error, Eye, EyeLine, EyeSlash, GalleryAdd, Helmet, Home, InfoCircle, Location, LocationSlash, Map, Messages, Mobile, MoneyRecive, MoneySend, Moneys, Motorbiker, Paperclip, PersonalCard, Receipt, ScanBarcode, Search, Setting, ShielVerified, Shop, ShoppingBagPlain, Star, Store, Succes, TickCircle, Ticket, Trash, User, UserCard, UserRemove, UserSquare, Warning } = ___index_js
 const iconRegistry = {
   "account": Account,
   "add": Add,
@@ -25,6 +25,7 @@ const iconRegistry = {
   "copy": Copy,
   "danger": Danger,
   "document-like": DocumentLike,
+  "empty-wallet": EmptyWallet,
   "error": Error,
   "eye": Eye,
   "eye-line": EyeLine,
@@ -38,6 +39,8 @@ const iconRegistry = {
   "map": Map,
   "messages": Messages,
   "mobile": Mobile,
+  "money-recive": MoneyRecive,
+  "money-send": MoneySend,
   "moneys": Moneys,
   "motorbiker": Motorbiker,
   "paperclip": Paperclip,
@@ -45,6 +48,7 @@ const iconRegistry = {
   "receipt": Receipt,
   "scan-barcode": ScanBarcode,
   "search": Search,
+  "setting": Setting,
   "shiel-verified": ShielVerified,
   "shop": Shop,
   "shopping-bag-plain": ShoppingBagPlain,
@@ -83,6 +87,7 @@ const iconNames = [
   "copy",
   "danger",
   "document-like",
+  "empty-wallet",
   "error",
   "eye",
   "eye-line",
@@ -96,6 +101,8 @@ const iconNames = [
   "map",
   "messages",
   "mobile",
+  "money-recive",
+  "money-send",
   "moneys",
   "motorbiker",
   "paperclip",
@@ -103,6 +110,7 @@ const iconNames = [
   "receipt",
   "scan-barcode",
   "search",
+  "setting",
   "shiel-verified",
   "shop",
   "shopping-bag-plain",

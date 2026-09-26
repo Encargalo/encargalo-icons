@@ -1,8 +1,9 @@
 # encargalo-icons
 
-Iconos de Encargalo, derivados de [IconSax](https://iconsax.io), empaquetados
-como componentes de React. El mismo import funciona en la app de Expo y en las
-webs; el paquete elige el renderer según la plataforma.
+Los iconos son de [IconSax](https://app.iconsax.io/); **no son diseños propios de
+Encargalo**. Este paquete sólo los empaqueta como componentes de React. El mismo
+import funciona en la app de Expo y en las webs; el paquete elige el renderer
+según la plataforma.
 
 ```bash
 npm install encargalo-icons
@@ -161,5 +162,13 @@ Instala y funciona con npm, pnpm, yarn (clásico y Berry con Plug'n'Play) y bun.
 
 ## Peso
 
-Los 28 iconos ocupan ~33 KB de datos de trazado. Cada icono importado suma entre
+Los 59 iconos ocupan ~71 KB de datos de trazado. Cada icono importado suma entre
 0,3 y 3 KB al bundle; sólo `encargalo-icons/dynamic` los incluye todos.
+
+## Créditos
+
+Todos los iconos provienen de [IconSax](https://app.iconsax.io/) y pertenecen a
+sus autores. Encargalo no los ha diseñado: sólo los exporta, los convierte a
+componentes y, en algunos casos, los ajusta. La licencia MIT de este repo cubre
+el código del paquete; para el uso de los iconos, consulta los términos de
+IconSax.

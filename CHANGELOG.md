@@ -3,6 +3,17 @@
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado es [SemVer](https://semver.org/lang/es/).
 
+## [1.3.0] - 2026-09-26
+
+### Añadido
+
+- 4 iconos nuevos (`outline`): `empty-wallet`, `money-recive` y `money-send`,
+  más `setting`, que además tiene variante `solid`.
+
+### Documentación
+
+- El README deja claro que los iconos son de IconSax y no diseños propios.
+
 ## [1.2.0] - 2026-09-25
 
 ### Añadido
