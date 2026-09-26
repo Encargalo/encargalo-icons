@@ -1,30 +1,69 @@
 name: Publicar en npm
 
-# Se dispara al empujar un tag de versión (el que crea `npm version`).
+# Dos formas de lanzar:
+#  - Botón (Actions → Publicar en npm → Run workflow): elige patch, minor o
+#    major y el workflow sube la versión, empuja commit y tag, y publica.
+#    Con «ninguno» publica la versión que ya está en package.json.
+#  - Empujar a mano un tag de versión (el que crea `npm version`).
+#
+# La publicación usa Trusted Publishing (OIDC): no hay ningún token. El
+# publicador de confianza está dado de alta en npmjs.com apuntando a ESTE
+# archivo, así que el nombre `publish.yml` no se puede cambiar sin actualizarlo
+# allí también.
 on:
   push:
     tags:
       - 'v*'
   workflow_dispatch:
+    inputs:
+      bump:
+        description: Tipo de versión a subir
+        type: choice
+        default: minor
+        options:
+          - minor
+          - patch
+          - major
+          - ninguno
+
+concurrency:
+  group: publicar-npm
+  cancel-in-progress: false
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      id-token: write # procedencia firmada en npm
+      contents: write # empujar el commit y el tag de la versión
+      id-token: write # Trusted Publishing con npm
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           registry-url: https://registry.npmjs.org
+
+      # Trusted Publishing exige npm 11.5.1 o superior.
+      - run: npm install -g npm@^11.5.1
 
       - run: npm ci
 
+      # Al lanzar desde el botón, sube la versión. `npm version` regenera el
+      # set (script `version`), crea el commit y el tag. Los empujamos aquí
+      # mismo: un tag empujado con GITHUB_TOKEN no dispara otro workflow.
+      - name: Subir la versión
+        if: github.event_name == 'workflow_dispatch' && inputs.bump != 'ninguno'
+        run: |
+          test "$GITHUB_REF_NAME" = "main" || { echo "Lanza el botón desde main"; exit 1; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          npm version "${{ inputs.bump }}"
+          git push origin HEAD:main --follow-tags
+
       # Falla pronto si el tag y la versión del package.json no coinciden.
       - name: Comprobar que el tag coincide con la versión
+        if: github.event_name == 'push'
         run: |
           TAG="${GITHUB_REF_NAME#v}"
           PKG="$(node -p "require('./package.json').version")"
@@ -40,5 +79,3 @@ jobs:
       - run: npm test
 
       - run: npm publish --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -136,46 +136,58 @@ diff — vuelve a ejecutarlo y súbelo.
 
 ## 4. Publicar en npm
 
-Sube la versión según lo que cambió ([SemVer](https://semver.org/lang/es/)):
+Se publica desde GitHub Actions con **Trusted Publishing** (OIDC): no hay ningún
+token que caduque o se pueda filtrar. npm confía en el workflow
+`.github/workflows/publish.yml` del repo `Encargalo/encargalo-icons`.
 
-| Cambio | Comando |
-| --- | --- |
-| Iconos nuevos, nada roto | `npm version minor` |
-| Corregir el trazado de un icono existente | `npm version patch` |
-| Renombrar o quitar un icono | `npm version major` |
+### Con el botón (lo habitual)
 
-`npm version` crea el commit y el tag. Después:
+Tras hacer commit y push de los iconos a `main`:
+
+- En GitHub: **Actions → Publicar en npm → Run workflow**, y elige el tipo de
+  versión.
+- O desde la terminal:
 
 ```bash
+git push
+gh workflow run publish.yml -f bump=minor   # o patch / major
+```
+
+| Cambio | `bump` |
+| --- | --- |
+| Iconos nuevos, nada roto | `minor` |
+| Corregir el trazado de un icono existente | `patch` |
+| Renombrar o quitar un icono | `major` |
+| Publicar la versión que ya está en `package.json` | `ninguno` |
+
+El workflow sube la versión (`npm version`), empuja el commit y el tag,
+regenera, pasa los tests y publica.
+
+### Con un tag a mano
+
+También publica al empujar un tag `v*`:
+
+```bash
+npm version minor
 git push --follow-tags
 ```
 
-### Publicación automática (lo deseable)
-
-El tag dispara `.github/workflows/publish.yml`, que verifica que el tag coincide
-con `package.json`, regenera, pasa los tests y publica.
-
-**Requiere configurar el secreto una sola vez:**
-
-1. En npmjs.com → *Access Tokens* → **Generate New Token → Classic → Automation**
-   (los tokens granulares no valen para publicar un paquete que aún no existe).
-2. En el repo:
-   ```bash
-   gh secret set NPM_TOKEN --repo Encargalo/encargalo-icons
-   ```
-
-### Publicación manual
-
-Si el secreto no está puesto:
+### Publicación manual (último recurso)
 
 ```bash
 npm login
 npm publish
 ```
 
-`prepublishOnly` regenera y pasa los tests antes de subir nada. Si la cuenta
-tiene 2FA, npm abre el navegador para confirmar — hay que hacerlo desde una
-terminal interactiva.
+La cuenta exige 2FA y no admite tokens que se lo salten, así que hay que
+hacerlo desde una terminal interactiva.
+
+### Si hay que reconfigurar el publicador de confianza
+
+En npmjs.com → paquete → *Settings* → *Trusted Publisher* → GitHub Actions:
+organización `Encargalo`, repo `encargalo-icons`, workflow `publish.yml`,
+sin *environment* y con *Allow npm publish*. Si se renombra el workflow, hay
+que actualizarlo también allí.
 
 ---
 
