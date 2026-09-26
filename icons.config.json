@@ -9,15 +9,18 @@
   "icons": {
     "arrow-left":    { "aliases": ["ArrowLeftLong"], "tags": ["atrás", "volver", "back", "navegación"] },
     "arrow-right":   { "aliases": ["ArrowRightLong"], "tags": ["siguiente", "next", "navegación"] },
+    "arrow-transfer": { "tags": ["transferir", "intercambio", "pago", "flechas"] },
     "bag":           { "aliases": ["ShoppingBag"], "tags": ["carrito", "compra", "pedido", "cart"] },
     "bag-timer":     { "aliases": ["OrderPending"], "tags": ["pedido", "pendiente", "en curso", "tiempo"] },
     "call":          { "aliases": ["Phone"], "tags": ["teléfono", "llamada", "contacto"] },
     "car":           { "aliases": ["Delivery"], "tags": ["entrega", "envío", "domicilio", "repartidor"] },
     "card":          { "aliases": ["CreditCard"], "tags": ["pago", "tarjeta", "checkout"] },
+    "card-tick":     { "tags": ["pago", "tarjeta", "confirmado", "aprobado"] },
     "chevron-down":  { "tags": ["desplegar", "acordeón", "flecha"] },
     "chevron-left":  { "tags": ["atrás", "flecha"] },
     "chevron-right": { "tags": ["ir", "detalle", "flecha"] },
     "close-circle":  { "aliases": ["XCircle"], "tags": ["cerrar", "cancelar", "error"] },
+    "coin":          { "tags": ["moneda", "efectivo", "pago", "dinero"] },
     "danger":        { "aliases": ["AlertTriangle"], "tags": ["alerta", "advertencia", "error"] },
     "document-like": { "aliases": ["Terms"], "tags": ["términos", "condiciones", "documento"] },
     "eye":           { "tags": ["ver", "mostrar", "contraseña"] },
@@ -26,6 +29,8 @@
     "helmet":        { "tags": ["repartidor", "moto", "casco", "delivery"] },
     "home":          { "tags": ["inicio", "tab", "principal"] },
     "info-circle":   { "aliases": ["Info"], "tags": ["información", "ayuda"] },
+    "location-slash": { "tags": ["ubicación", "gps", "desactivada", "sin permiso"] },
+    "map":           { "tags": ["mapa", "ubicación", "ruta", "entrega"] },
     "messages":      { "tags": ["chat", "mensajes", "conversación", "soporte"] },
     "paperclip":     { "aliases": ["Attachment"], "tags": ["adjuntar", "archivo"] },
     "personal-card": { "aliases": ["IdCard"], "tags": ["perfil", "identidad", "cuenta", "dni"] },
@@ -37,6 +42,7 @@
     "tick-circle":   { "aliases": ["CheckCircle"], "tags": ["éxito", "confirmado", "ok"] },
     "trash":         { "tags": ["eliminar", "borrar", "basura"] },
     "user":          { "tags": ["perfil", "cuenta", "tab"] },
+    "user-remove":   { "tags": ["quitar usuario", "eliminar cuenta", "perfil"] },
     "user-square":   { "aliases": ["Profile"], "tags": ["perfil", "cuenta", "avatar"] }
   }
 }

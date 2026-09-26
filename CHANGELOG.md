@@ -3,6 +3,17 @@
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado es [SemVer](https://semver.org/lang/es/).
 
+## [1.2.0] - 2026-09-25
+
+### Añadido
+
+- 6 iconos nuevos: `arrow-transfer`, `card-tick`, `coin`, `map` y
+  `user-remove` (`outline`), y `location-slash` (`solid`).
+
+### Cambiado
+
+- `car` (`outline`): reexportado con trazos en lugar de rellenos.
+
 ## [1.1.0] - 2026-09-23
 
 ### Añadido
