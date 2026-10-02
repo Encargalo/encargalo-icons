@@ -2,7 +2,7 @@
 const _react = require('react')
 const { createElement } = _react
 const ___index_js = require('./index.js')
-const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, ArrowTransfer, Bag, BagTimer, Call, Car, Card, CardTick, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Coin, Copy, Danger, DocumentLike, EmptyWallet, Error, Eye, EyeLine, EyeSlash, GalleryAdd, Helmet, Home, InfoCircle, Location, LocationSlash, Map, Messages, Mobile, MoneyRecive, MoneySend, Moneys, Motorbiker, Paperclip, PersonalCard, Receipt, ScanBarcode, Search, Setting, ShielVerified, Shop, ShoppingBagPlain, Star, Store, Succes, TickCircle, Ticket, Trash, User, UserCard, UserRemove, UserSquare, Warning } = ___index_js
+const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, ArrowTransfer, Bag, BagTimer, Call, Car, Card, CardTick, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Coffee, Coin, Copy, Danger, DocumentLike, EmptyWallet, Error, Eye, EyeLine, EyeSlash, Flash, GalleryAdd, Helmet, Home, InfoCircle, Location, LocationSlash, Map, Messages, Mobile, MoneyRecive, MoneySend, Moneys, Motorbiker, Paperclip, PersonalCard, Printer, Receipt, ScanBarcode, Search, Setting, ShielVerified, Shop, ShoppingBagPlain, ShoppingCart, Star, Store, Succes, TickCircle, Ticket, Trash, User, UserCard, UserRemove, UserSquare, Warning } = ___index_js
 const iconRegistry = {
   "account": Account,
   "add": Add,
@@ -21,6 +21,7 @@ const iconRegistry = {
   "chevron-right": ChevronRight,
   "clock": Clock,
   "close-circle": CloseCircle,
+  "coffee": Coffee,
   "coin": Coin,
   "copy": Copy,
   "danger": Danger,
@@ -30,6 +31,7 @@ const iconRegistry = {
   "eye": Eye,
   "eye-line": EyeLine,
   "eye-slash": EyeSlash,
+  "flash": Flash,
   "gallery-add": GalleryAdd,
   "helmet": Helmet,
   "home": Home,
@@ -45,6 +47,7 @@ const iconRegistry = {
   "motorbiker": Motorbiker,
   "paperclip": Paperclip,
   "personal-card": PersonalCard,
+  "printer": Printer,
   "receipt": Receipt,
   "scan-barcode": ScanBarcode,
   "search": Search,
@@ -52,6 +55,7 @@ const iconRegistry = {
   "shiel-verified": ShielVerified,
   "shop": Shop,
   "shopping-bag-plain": ShoppingBagPlain,
+  "shopping-cart": ShoppingCart,
   "star": Star,
   "store": Store,
   "succes": Succes,
@@ -83,6 +87,7 @@ const iconNames = [
   "chevron-right",
   "clock",
   "close-circle",
+  "coffee",
   "coin",
   "copy",
   "danger",
@@ -92,6 +97,7 @@ const iconNames = [
   "eye",
   "eye-line",
   "eye-slash",
+  "flash",
   "gallery-add",
   "helmet",
   "home",
@@ -107,6 +113,7 @@ const iconNames = [
   "motorbiker",
   "paperclip",
   "personal-card",
+  "printer",
   "receipt",
   "scan-barcode",
   "search",
@@ -114,6 +121,7 @@ const iconNames = [
   "shiel-verified",
   "shop",
   "shopping-bag-plain",
+  "shopping-cart",
   "star",
   "store",
   "succes",

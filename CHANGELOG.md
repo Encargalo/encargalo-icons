@@ -3,6 +3,13 @@
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado es [SemVer](https://semver.org/lang/es/).
 
+## [Sin publicar]
+
+### Añadido
+
+- 3 iconos nuevos (`outline`): `coffee`, `printer` y `shopping-cart`.
+- 1 icono nuevo (`solid`): `flash`.
+
 ## [1.3.0] - 2026-09-26
 
 ### Añadido
