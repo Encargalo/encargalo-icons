@@ -9,6 +9,11 @@ y el versionado es [SemVer](https://semver.org/lang/es/).
 
 - 3 iconos nuevos (`outline`): `coffee`, `printer` y `shopping-cart`.
 - 1 icono nuevo (`solid`): `flash`.
+- 1 icono nuevo (`outline`): `minus`.
+
+### Cambiado
+
+- `add` (`outline`): trazado actualizado.
 
 ## [1.3.0] - 2026-09-26
 

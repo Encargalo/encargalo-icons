@@ -2,7 +2,7 @@
 const _react = require('react')
 const { createElement } = _react
 const ___index_js = require('./index.js')
-const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, ArrowTransfer, Bag, BagTimer, Call, Car, Card, CardTick, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Coffee, Coin, Copy, Danger, DocumentLike, EmptyWallet, Error, Eye, EyeLine, EyeSlash, Flash, GalleryAdd, Helmet, Home, InfoCircle, Location, LocationSlash, Map, Messages, Mobile, MoneyRecive, MoneySend, Moneys, Motorbiker, Paperclip, PersonalCard, Printer, Receipt, ScanBarcode, Search, Setting, ShielVerified, Shop, ShoppingBagPlain, ShoppingCart, Star, Store, Succes, TickCircle, Ticket, Trash, User, UserCard, UserRemove, UserSquare, Warning } = ___index_js
+const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, ArrowTransfer, Bag, BagTimer, Call, Car, Card, CardTick, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Coffee, Coin, Copy, Danger, DocumentLike, EmptyWallet, Error, Eye, EyeLine, EyeSlash, Flash, GalleryAdd, Helmet, Home, InfoCircle, Location, LocationSlash, Map, Messages, Minus, Mobile, MoneyRecive, MoneySend, Moneys, Motorbiker, Paperclip, PersonalCard, Printer, Receipt, ScanBarcode, Search, Setting, ShielVerified, Shop, ShoppingBagPlain, ShoppingCart, Star, Store, Succes, TickCircle, Ticket, Trash, User, UserCard, UserRemove, UserSquare, Warning } = ___index_js
 const iconRegistry = {
   "account": Account,
   "add": Add,
@@ -40,6 +40,7 @@ const iconRegistry = {
   "location-slash": LocationSlash,
   "map": Map,
   "messages": Messages,
+  "minus": Minus,
   "mobile": Mobile,
   "money-recive": MoneyRecive,
   "money-send": MoneySend,
@@ -106,6 +107,7 @@ const iconNames = [
   "location-slash",
   "map",
   "messages",
+  "minus",
   "mobile",
   "money-recive",
   "money-send",

@@ -39,6 +39,7 @@ export type IconName =
   | "location-slash"
   | "map"
   | "messages"
+  | "minus"
   | "mobile"
   | "money-recive"
   | "money-send"
