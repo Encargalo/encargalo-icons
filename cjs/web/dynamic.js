@@ -2,7 +2,7 @@
 const _react = require('react')
 const { createElement } = _react
 const ___index_js = require('./index.js')
-const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, ArrowTransfer, Bag, BagTimer, Call, Car, Card, CardTick, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Coffee, Coin, Copy, Danger, DocumentLike, EmptyWallet, Error, Eye, EyeLine, EyeSlash, Flash, GalleryAdd, Helmet, Home, InfoCircle, Location, LocationSlash, Map, Messages, Minus, Mobile, MoneyRecive, MoneySend, Moneys, Motorbiker, Paperclip, PersonalCard, Printer, Receipt, ScanBarcode, Search, Setting, ShielVerified, Shop, ShoppingBagPlain, ShoppingCart, Star, Store, Succes, TickCircle, Ticket, Trash, User, UserCard, UserRemove, UserSquare, Warning } = ___index_js
+const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, ArrowTransfer, Bag, BagTimer, Call, Car, Card, CardTick, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Coffee, Coin, Copy, Danger, DocumentLike, DocumentUpload, EmptyWallet, Error, Eye, EyeLine, EyeSlash, Flash, GalleryAdd, Helmet, Home, InfoCircle, Location, LocationSlash, Map, Messages, Minus, Mobile, MoneyRecive, MoneySend, Moneys, Motorbiker, Paperclip, PersonalCard, Printer, Receipt, ScanBarcode, Search, Setting, ShielVerified, Shop, ShoppingBagPlain, ShoppingCart, Star, Store, Succes, TickCircle, Ticket, Trash, User, UserCard, UserRemove, UserSquare, Warning } = ___index_js
 const iconRegistry = {
   "account": Account,
   "add": Add,
@@ -26,6 +26,7 @@ const iconRegistry = {
   "copy": Copy,
   "danger": Danger,
   "document-like": DocumentLike,
+  "document-upload": DocumentUpload,
   "empty-wallet": EmptyWallet,
   "error": Error,
   "eye": Eye,
@@ -93,6 +94,7 @@ const iconNames = [
   "copy",
   "danger",
   "document-like",
+  "document-upload",
   "empty-wallet",
   "error",
   "eye",

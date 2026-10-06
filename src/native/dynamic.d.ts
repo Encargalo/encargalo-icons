@@ -25,6 +25,7 @@ export type IconName =
   | "copy"
   | "danger"
   | "document-like"
+  | "document-upload"
   | "empty-wallet"
   | "error"
   | "eye"

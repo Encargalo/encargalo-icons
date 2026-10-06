@@ -10,10 +10,12 @@ y el versionado es [SemVer](https://semver.org/lang/es/).
 - 3 iconos nuevos (`outline`): `coffee`, `printer` y `shopping-cart`.
 - 1 icono nuevo (`solid`): `flash`.
 - 1 icono nuevo (`outline`): `minus`.
+- 1 icono nuevo (`outline` y `solid`): `document-upload`.
 
 ### Cambiado
 
 - `add` (`outline`): trazado actualizado.
+- `card` (`outline`) y `receipt` (`outline` y `solid`): trazado actualizado.
 
 ## [1.3.0] - 2026-09-26
 
