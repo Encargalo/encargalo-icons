@@ -57,6 +57,7 @@ export type IconName =
   | "shop"
   | "shopping-bag-plain"
   | "shopping-cart"
+  | "shuffle"
   | "star"
   | "store"
   | "succes"

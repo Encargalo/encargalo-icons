@@ -2,7 +2,7 @@
 const _react = require('react')
 const { createElement } = _react
 const ___index_js = require('./index.js')
-const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, ArrowTransfer, Bag, BagTimer, Call, Car, Card, CardTick, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Coffee, Coin, Copy, Danger, DocumentLike, DocumentUpload, EmptyWallet, Error, Eye, EyeLine, EyeSlash, Flash, GalleryAdd, Helmet, Home, InfoCircle, Location, LocationSlash, Map, Messages, Minus, Mobile, MoneyRecive, MoneySend, Moneys, Motorbiker, Paperclip, PersonalCard, Printer, Receipt, ScanBarcode, Search, Setting, ShielVerified, Shop, ShoppingBagPlain, ShoppingCart, Star, Store, Succes, TickCircle, Ticket, Trash, User, UserCard, UserRemove, UserSquare, Warning } = ___index_js
+const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, ArrowTransfer, Bag, BagTimer, Call, Car, Card, CardTick, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Coffee, Coin, Copy, Danger, DocumentLike, DocumentUpload, EmptyWallet, Error, Eye, EyeLine, EyeSlash, Flash, GalleryAdd, Helmet, Home, InfoCircle, Location, LocationSlash, Map, Messages, Minus, Mobile, MoneyRecive, MoneySend, Moneys, Motorbiker, Paperclip, PersonalCard, Printer, Receipt, ScanBarcode, Search, Setting, ShielVerified, Shop, ShoppingBagPlain, ShoppingCart, Shuffle, Star, Store, Succes, TickCircle, Ticket, Trash, User, UserCard, UserRemove, UserSquare, Warning } = ___index_js
 const iconRegistry = {
   "account": Account,
   "add": Add,
@@ -58,6 +58,7 @@ const iconRegistry = {
   "shop": Shop,
   "shopping-bag-plain": ShoppingBagPlain,
   "shopping-cart": ShoppingCart,
+  "shuffle": Shuffle,
   "star": Star,
   "store": Store,
   "succes": Succes,
@@ -126,6 +127,7 @@ const iconNames = [
   "shop",
   "shopping-bag-plain",
   "shopping-cart",
+  "shuffle",
   "star",
   "store",
   "succes",
