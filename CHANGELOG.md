@@ -5,20 +5,46 @@ y el versionado es [SemVer](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+## [1.8.0] - 2026-10-12
+
 ### Añadido
 
-- 3 iconos nuevos (`outline`): `coffee`, `printer` y `shopping-cart`.
-- 1 icono nuevo (`solid`): `flash`.
-- 1 icono nuevo (`outline`): `minus`.
-- 1 icono nuevo (`outline` y `solid`): `document-upload`.
 - 5 iconos nuevos (`outline`): `bell2`, `document-text`, `lock`, `logout` y
   `pause-circle`.
 - 1 icono nuevo (`solid`): `headphone`.
 
+## [1.7.0] - 2026-10-09
+
+### Añadido
+
+- 1 icono nuevo (`outline`): `shuffle`.
+
+## [1.6.0] - 2026-10-06
+
+### Añadido
+
+- 1 icono nuevo (`outline` y `solid`): `document-upload`.
+
+### Cambiado
+
+- `card` (`outline`) y `receipt` (`outline` y `solid`): trazado actualizado.
+
+## [1.5.0] - 2026-10-03
+
+### Añadido
+
+- 1 icono nuevo (`outline`): `minus`.
+
 ### Cambiado
 
 - `add` (`outline`): trazado actualizado.
-- `card` (`outline`) y `receipt` (`outline` y `solid`): trazado actualizado.
+
+## [1.4.0] - 2026-10-02
+
+### Añadido
+
+- 3 iconos nuevos (`outline`): `coffee`, `printer` y `shopping-cart`.
+- 1 icono nuevo (`solid`): `flash`.
 
 ## [1.3.0] - 2026-09-26
 

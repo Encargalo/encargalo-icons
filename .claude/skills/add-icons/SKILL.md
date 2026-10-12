@@ -62,7 +62,7 @@ existentes. Si añades entradas, vuelve a ejecutar `npm run build`.
 
 ## 4. CHANGELOG
 
-Añade a `## [Sin publicar]` de `CHANGELOG.md`, en el mismo estilo que las líneas
+Añade a `## [Sin publicar]` (se cierra al publicar, paso 6) de `CHANGELOG.md`, en el mismo estilo que las líneas
 existentes:
 
 - Iconos nuevos → `### Añadido`, indicando variante: «1 icono nuevo (`outline`): `nombre`».
@@ -87,6 +87,10 @@ volver a preguntar (salvo `major`):
 4. Sigue la ejecución (`gh run watch`) hasta que termine. Si falla, enséñale el
    error al usuario; no reintentes a ciegas.
 5. El workflow sube la versión y empuja un commit + tag: haz `git pull` al acabar.
+6. **Cierra el CHANGELOG:** mueve lo de `## [Sin publicar]` a una sección nueva
+   `## [X.Y.Z] - AAAA-MM-DD` (versión del `package.json` ya actualizado y fecha del
+   tag), dejando `[Sin publicar]` vacío. Commit `Actualizar CHANGELOG a X.Y.Z` y
+   `git push`.
 
 Si el build o los tests fallaron en el paso 2, **no publiques**.
 
