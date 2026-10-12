@@ -23,6 +23,11 @@ La ruta donde el usuario deja los SVG exportados vive en `.iconsrc.json`
 
 La bandeja debe tener `Outline/` y/o `Solid/` con los `.svg`.
 
+**Revisa SIEMPRE las dos carpetas** (`Outline/` y `Solid/`), aunque el usuario
+sólo mencione una o diga un número de iconos: lístalas con `ls` y comprueba que
+todo lo que hay en ambas aparece en el dry-run. Si falta alguno, investiga por qué
+antes de seguir. Al final, vuelve a ejecutar el dry-run: debe salir sin pendientes.
+
 ## 1. Previsualizar
 
 ```bash

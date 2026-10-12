@@ -11,6 +11,9 @@ y el versionado es [SemVer](https://semver.org/lang/es/).
 - 1 icono nuevo (`solid`): `flash`.
 - 1 icono nuevo (`outline`): `minus`.
 - 1 icono nuevo (`outline` y `solid`): `document-upload`.
+- 5 iconos nuevos (`outline`): `bell2`, `document-text`, `lock`, `logout` y
+  `pause-circle`.
+- 1 icono nuevo (`solid`): `headphone`.
 
 ### Cambiado
 
