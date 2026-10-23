@@ -5,6 +5,10 @@ y el versionado es [SemVer](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+### Añadido
+
+- 1 icono nuevo (`outline`): `instagram`.
+
 ## [1.8.0] - 2026-10-12
 
 ### Añadido

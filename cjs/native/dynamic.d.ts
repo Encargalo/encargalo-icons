@@ -39,6 +39,7 @@ export type IconName =
   | "helmet"
   | "home"
   | "info-circle"
+  | "instagram"
   | "location"
   | "location-slash"
   | "lock"
