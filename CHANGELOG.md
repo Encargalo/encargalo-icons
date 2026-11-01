@@ -5,6 +5,10 @@ y el versionado es [SemVer](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+### Cambiado
+
+- `box` (`outline`): trazado actualizado.
+
 ## [1.10.0] - 2026-10-31
 
 ### Añadido
