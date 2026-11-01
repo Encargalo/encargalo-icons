@@ -12,6 +12,7 @@ export type IconName =
   | "bag"
   | "bag-timer"
   | "bell2"
+  | "box"
   | "call"
   | "car"
   | "card"

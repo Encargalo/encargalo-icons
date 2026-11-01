@@ -11,6 +11,7 @@
     "arrow-right":   { "aliases": ["ArrowRightLong"], "tags": ["siguiente", "next", "navegación"] },
     "arrow-transfer": { "tags": ["transferir", "intercambio", "pago", "flechas"] },
     "bell2":         { "tags": ["notificaciones", "alerta", "aviso", "campana"] },
+    "box":           { "tags": ["caja", "paquete", "envío", "pedido"] },
     "bag":           { "aliases": ["ShoppingBag"], "tags": ["carrito", "compra", "pedido", "cart"] },
     "bag-timer":     { "aliases": ["OrderPending"], "tags": ["pedido", "pendiente", "en curso", "tiempo"] },
     "call":          { "aliases": ["Phone"], "tags": ["teléfono", "llamada", "contacto"] },

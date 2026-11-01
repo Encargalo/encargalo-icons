@@ -2,7 +2,7 @@
 const _react = require('react')
 const { createElement } = _react
 const ___index_js = require('./index.js')
-const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, ArrowTransfer, Bag, BagTimer, Bell2, Call, Car, Card, CardTick, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Coffee, Coin, Copy, Danger, DocumentLike, DocumentText, DocumentUpload, EmptyWallet, Error, Eye, EyeLine, EyeSlash, Flash, GalleryAdd, Headphone, Helmet, Home, InfoCircle, Instagram, Location, LocationSlash, Lock, Logout, Map, Messages, Minus, Mobile, MoneyRecive, MoneySend, Moneys, Motorbiker, Paperclip, PauseCircle, PersonalCard, Printer, Receipt, ScanBarcode, Search, Setting, ShielVerified, Shop, ShoppingBagPlain, ShoppingCart, Shuffle, Star, Store, Succes, TickCircle, Ticket, Trash, User, UserCard, UserRemove, UserSquare, Warning } = ___index_js
+const { Account, Add, AlertCircle, ArrowLeft, ArrowRight, ArrowTransfer, Bag, BagTimer, Bell2, Box, Call, Car, Card, CardTick, ChevronDown, ChevronLeft, ChevronRight, Clock, CloseCircle, Coffee, Coin, Copy, Danger, DocumentLike, DocumentText, DocumentUpload, EmptyWallet, Error, Eye, EyeLine, EyeSlash, Flash, GalleryAdd, Headphone, Helmet, Home, InfoCircle, Instagram, Location, LocationSlash, Lock, Logout, Map, Messages, Minus, Mobile, MoneyRecive, MoneySend, Moneys, Motorbiker, Paperclip, PauseCircle, PersonalCard, Printer, Receipt, ScanBarcode, Search, Setting, ShielVerified, Shop, ShoppingBagPlain, ShoppingCart, Shuffle, Star, Store, Succes, TickCircle, Ticket, Trash, User, UserCard, UserRemove, UserSquare, Warning } = ___index_js
 const iconRegistry = {
   "account": Account,
   "add": Add,
@@ -13,6 +13,7 @@ const iconRegistry = {
   "bag": Bag,
   "bag-timer": BagTimer,
   "bell2": Bell2,
+  "box": Box,
   "call": Call,
   "car": Car,
   "card": Card,
@@ -89,6 +90,7 @@ const iconNames = [
   "bag",
   "bag-timer",
   "bell2",
+  "box",
   "call",
   "car",
   "card",
